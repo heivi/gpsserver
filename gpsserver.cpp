@@ -113,6 +113,7 @@ void* SocketHandler(void* lp){
 	char buffer[8192];
 	int buffer_len = 8192;
 	int bytecount;
+	unsigned long int = 0;
 
 	struct timeval tv;
 	tv.tv_sec = 90;
@@ -153,6 +154,15 @@ void* SocketHandler(void* lp){
 
 				goto FINISH;
 			}
+		}
+		
+		std::string readsd = "readsd123456 1";
+		if (time(NULL) - sec > 10) {
+			if((bytecount = send(*csock, readsd.c_str(), readsd.length(), 0))== -1){
+                                fprintf(stderr, "Error asking readsd %d\n", errno);
+                                
+                                goto FINISH;
+                        }
 		}
 
 	}
@@ -304,7 +314,7 @@ int HandleGPSData(char* data) {
 		string tofile = "";
 		if (id == "") {
 			id = imei;
-			cout << "Couldn't find imei: ¦" << imei << "|\n";
+			cout << "Couldn't find imei: ï¿½" << imei << "|\n";
 		} else {
 			cout << "id: |" << id << "| : ";
 		}

@@ -10,5 +10,5 @@ One thing, that's not required but quite interesting, is that if you are running
 I have also included a bash-script (gpslog.sh) I use to keep my log tidy. You just change the folders right, and run the script for example via crontab, and it will copy the log to a another folder with the current timestamp as filename. It will also empty the gps.log. I have used an interval of an hour which works quite well.
 
 Copyright 2012 Heikki Virekunnas
-heikkivirekunnas@hotmail.com
-http://www.heikki.tk
+heikki@virekunnas.fi
+http://heikki.virekunnas.fi
